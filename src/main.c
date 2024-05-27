@@ -356,10 +356,10 @@ void create_file_names(void) {
   output_file_name[len + 5] = 'o';
 
 #ifndef __WIN32__
-  mkdtemp(action_file_name);
-  mkdtemp(text_file_name);
-  mkdtemp(union_file_name);
-  mkdtemp(output_file_name);
+  mkstemp(action_file_name);
+  mkstemp(text_file_name);
+  mkstemp(union_file_name);
+  mkstemp(output_file_name);
 #else
   _mktemp_s(action_file_name, i);
   _mktemp_s(text_file_name, i);
