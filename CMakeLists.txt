@@ -23,5 +23,5 @@ target_include_directories(${PROJECT_NAME}
                            PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 if(WIN32 AND NOT MINGW)
-  target_compile_definitions(${PROJECT_NAME} "__WIN32__")
+  target_compile_definitions(${PROJECT_NAME} PUBLIC "__WIN32__")
 endif()
